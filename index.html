@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171719">
+<title>Débloquer le code promo</title>
+<style>
+:root{--bg:#171719;--card:#202023;--muted:#aaa9b0;--line:#35353a;--red:#f01912;--green:#29c878;--yellow:#e9bd5b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 95% 10%,#1b2b1c 0,transparent 25%),#171719;color:#f5f4f6;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.page{max-width:720px;margin:0 auto;padding:22px 16px 48px}.top{display:flex;justify-content:flex-end;margin-bottom:18px}
+select{background:#222225;color:#eee;border:1px solid #39393e;border-radius:28px;padding:13px 17px;font-size:15px;max-width:180px}
+.card{background:linear-gradient(145deg,#222225,#1b1b1e);border:1px solid #343438;border-radius:27px;padding:24px 22px;box-shadow:0 18px 55px #0002}
+.hero{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:19px;background:#2a2a2e;display:block;margin-bottom:18px}
+h1{font-size:clamp(27px,5vw,39px);line-height:1.18;letter-spacing:-.7px;margin:8px 0 18px}
+.lead{font-size:clamp(17px,3.5vw,23px);line-height:1.55;color:#d3d2d7;margin:0 0 22px}
+.intro{font-size:17px;line-height:1.65;color:#aaa9b0;margin:0 0 24px}.intro strong{color:#f1f0f2}
+.codebox{border:1px dashed #48484d;border-radius:22px;padding:22px 16px;text-align:center;background:#151517;margin:20px 0 27px}
+.codetitle{font-size:17px;color:#d5d4d9}.blurcode{font-size:clamp(34px,8vw,58px);font-weight:850;letter-spacing:2px;filter:blur(9px);opacity:.55;user-select:none;margin:18px 0}
+.lock{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#29292d;border:1px solid #424247;margin-top:-64px;position:relative;font-size:23px}
+.hint{color:#88878e;font-size:16px;margin-top:14px}.stage{text-align:center;font-size:23px;margin:24px 0 16px}.progress{display:flex;gap:9px;justify-content:center;margin-bottom:24px}.seg{height:7px;width:48px;background:#3c3c41;border-radius:20px}.seg.done{background:var(--green)}
+.btn{width:100%;border:0;border-radius:22px;padding:20px 16px;font-size:19px;font-weight:650;display:flex;gap:12px;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;transition:.15s}
+.btn-red{background:var(--red);color:white;box-shadow:inset 0 -3px #b9100b}.btn-red:active{transform:scale(.99)}.btn-light{background:#f7f7f8;color:#151517}.btn-dark{background:#29292d;color:#f3f2f4;border:1px solid #424247}.btn:disabled{opacity:.4;cursor:not-allowed}
+.status{border:1px solid #343438;border-radius:18px;padding:15px;margin:16px 0;background:#242427;color:#c9c8ce;text-align:center;font-size:16px}
+.status.ok{color:var(--green);background:#14271f;border-color:#20543d}.status.warn{color:var(--yellow);background:#2b261b;border-color:#5a4b2c}
+.help{margin-top:20px;border:1px solid #343438;border-radius:22px;overflow:hidden;background:#1b1b1e}.helphead{padding:18px 20px;font-weight:700;font-size:18px;cursor:pointer;display:flex;justify-content:space-between}.helpbody{padding:0 20px 20px;color:#d2d1d6}
+.tabs{display:flex;background:#29292d;padding:5px;border-radius:30px;margin:12px 0 18px}.tab{flex:1;text-align:center;padding:12px 8px;border-radius:25px;color:#a5a4aa;cursor:pointer}.tab.active{background:#454549;color:white}
+.steps{list-style:none;padding:0;margin:0;counter-reset:step}.steps li{counter-increment:step;position:relative;padding:4px 0 18px 48px;font-size:16px;line-height:1.5}.steps li:before{content:counter(step);position:absolute;left:0;top:2px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#303034;font-weight:700}
+.note{font-size:13px;color:#929198;line-height:1.5;margin-top:18px}.hidden{display:none!important}.unlocked{border:1px dashed #444;border-radius:22px;padding:24px 12px;text-align:center;background:#141416;font-size:clamp(42px,10vw,70px);font-weight:900;letter-spacing:1px;margin:18px 0}
+.copyrow{display:grid;gap:12px;margin-top:12px}.footer{text-align:center;color:#77767d;font-size:12px;margin-top:20px}
+@media(min-width:600px){.page{padding-top:34px}.card{padding:30px}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top"><select id="language" aria-label="Language">
+    <option value="fr">🌐 Français</option><option value="en">🌐 English</option><option value="es">🌐 Español</option><option value="pt">🌐 Português</option><option value="de">🌐 Deutsch</option><option value="it">🌐 Italiano</option>
+  </select></div>
+  <main class="card">
+    <img id="hero" class="hero" src="https://placehold.co/1200x675/20c9a1/101010?text=YOUR+PROMO+BANNER" alt="Bannière de l'offre">
+    <h1 data-i18n="title">Accès gratuit — débloquez votre code promo</h1>
+    <p class="lead" data-i18n="lead">Effectuez les deux étapes ci-dessous pour révéler votre code promo.</p>
+    <p class="intro" data-i18n="intro">Pour débloquer <strong>votre code promo</strong>, effectuez les 2 étapes gratuites. Après chaque action, revenez sur cette page et appuyez sur le bouton de vérification.</p>
+
+    <section id="lockedCode" class="codebox">
+      <div class="codetitle">◇ <span data-i18n="yourCode">Votre code promo</span></div>
+      <div class="blurcode" id="blurred">YOUR-CODE</div><div class="lock">🔒</div>
+      <div class="hint" data-i18n="revealHint">Révélé une fois les étapes terminées</div>
+    </section>
+
+    <div id="stageLabel" class="stage">Étape 1 sur 2</div>
+    <div class="progress"><span class="seg" id="seg1"></span><span class="seg" id="seg2"></span></div>
+
+    <section id="step1">
+      <a class="btn btn-red" id="subscribeLink" href="https://www.youtube.com/" target="_blank" rel="noopener">▶ <span data-i18n="subscribe">S'abonner et activer les notifications</span></a>
+      <button class="btn btn-dark" id="verify1" style="margin-top:14px">✓ <span data-i18n="verifySub">Vérifier votre abonnement</span></button>
+      <div id="status1" class="status hidden"></div>
+    </section>
+
+    <section id="step2" class="hidden">
+      <div class="status ok" data-i18n="subConfirmed">✓ Abonnement confirmé sur ce site</div>
+      <a class="btn btn-red" id="likeLink" href="https://www.youtube.com/" target="_blank" rel="noopener">▶ <span data-i18n="like">Liker et commenter la vidéo</span></a>
+      <button class="btn btn-dark" id="verify2" style="margin-top:14px">✓ <span data-i18n="verifyLike">Vérifier le like</span></button>
+      <div id="status2" class="status hidden"></div>
+    </section>
+
+    <section id="unlockArea" class="hidden">
+      <div class="status ok" data-i18n="bothDone">✓ Les deux étapes sont confirmées</div>
+      <div style="display:flex;justify-content:space-between;color:#b7b6bc;margin:24px 0 10px"><span data-i18n="progress">Progression du déblocage</span><strong style="color:var(--green)">2/2</strong></div>
+      <div style="height:7px;background:#29292d;border-radius:12px;margin-bottom:22px"><div style="height:100%;width:100%;background:var(--green);border-radius:12px"></div></div>
+      <button class="btn btn-light" id="unlock">🔒 <span data-i18n="unlock">Débloquer le lien</span></button>
+    </section>
+
+    <section id="revealed" class="hidden">
+      <div style="text-align:center;color:var(--green);font-size:18px;font-weight:700;margin-top:24px" data-i18n="unlockedLabel">♧ Débloqué — votre code</div>
+      <div class="unlocked" id="realCode">YOUR-CODE</div>
+      <div class="copyrow"><button class="btn btn-dark" id="copy">▢ <span data-i18n="copy">Copier</span></button>
+      <a class="btn btn-light" id="destination" href="https://example.com/" target="_blank" rel="noopener"><span data-i18n="openSite">Ouvrir le site</span> ↗</a></div>
+      <p class="hint" style="text-align:center" data-i18n="copyHint">Copiez le code et utilisez-le sur le site concerné.</p>
+    </section>
+
+    <details class="help" open>
+      <summary class="helphead"><span>ⓘ <span data-i18n="how">Comment faire</span></span><span>⌄</span></summary>
+      <div class="helpbody">
+        <div class="tabs"><div class="tab active" id="phoneTab">▯ <span data-i18n="phone">Téléphone</span></div><div class="tab" id="computerTab">▱ <span data-i18n="computer">Ordinateur</span></div></div>
+        <ol class="steps" id="helpSteps">
+          <li data-i18n="help1a">Appuyez sur le bouton rouge pour ouvrir la vidéo dans YouTube.</li>
+          <li data-i18n="help1b">Abonnez-vous à la chaîne, puis revenez sur cette page.</li>
+          <li data-i18n="help1c">Appuyez sur « Vérifier votre abonnement » pour continuer.</li>
+        </ol>
+        <p class="note" data-i18n="disclaimer">Mode simulation : les messages de vérification sont scénarisés et ne contrôlent pas réellement votre abonnement, votre like ou votre commentaire sur YouTube.</p>
+      </div>
+    </details>
+    <div class="footer">© <span id="year"></span> — <span data-i18n="footer">Page indépendante • Conditions de l'offre à vérifier</span></div>
+  </main>
+</div>
+<script>
+/* ================== PERSONNALISATION ==================
+   Remplace ces valeurs par tes propres liens et ton code.
+   Le code affiché dans un site statique public n'est pas secret. Les confirmations d’étapes sont simulées et ne prouvent pas les actions YouTube.
+*/
+const CONFIG = {
+  promoCode: "WOW27",
+  youtubeVideoUrl: "https://m.youtube.com/watch?v=6Y7_1OPvKVY",
+  youtubeChannelUrl: "https://m.youtube.com/@FREEBITCOINHACKSCRIPT-u6g6o",
+  destinationUrl: "https://m.youtube.com/watch?v=6Y7_1OPvKVY", // Remplacer par le site de redemption du code si different
+  bannerUrl: "https://placehold.co/1200x675/20c9a1/101010?text=YOUR+PROMO+BANNER"
+};
+document.getElementById("hero").src=CONFIG.bannerUrl;
+document.getElementById("subscribeLink").href=CONFIG.youtubeChannelUrl;
+document.getElementById("likeLink").href=CONFIG.youtubeVideoUrl;
+document.getElementById("destination").href=CONFIG.destinationUrl;
+document.getElementById("blurred").textContent=CONFIG.promoCode;
+document.getElementById("realCode").textContent=CONFIG.promoCode;
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const dict={
+fr:{title:"Accès gratuit — débloquez votre code promo",lead:"Effectuez les deux étapes ci-dessous pour révéler votre code promo.",intro:'Pour débloquer <strong>votre code promo</strong>, effectuez les 2 étapes gratuites. Après chaque action, revenez sur cette page et appuyez sur le bouton de vérification.',yourCode:"Votre code promo",revealHint:"Révélé une fois les étapes terminées",subscribe:"S'abonner et activer les notifications",verifySub:"Vérifier votre abonnement",subConfirmed:"✓ Abonnement confirmé sur ce site",like:"Liker et commenter la vidéo",verifyLike:"Vérifier le like",bothDone:"✓ Les deux étapes sont confirmées",progress:"Progression du déblocage",unlock:"Débloquer le lien",unlockedLabel:"♧ Débloqué — votre code",copy:"Copier",openSite:"Ouvrir le site",copyHint:"Copiez le code et utilisez-le sur le site concerné.",how:"Comment faire",phone:"Téléphone",computer:"Ordinateur",help1a:"Appuyez sur le bouton rouge pour ouvrir la vidéo dans YouTube.",help1b:"Abonnez-vous à la chaîne, puis revenez sur cette page.",help1c:"Appuyez sur « Vérifier votre abonnement » pour continuer.",disclaimer:"Mode simulation : les messages de vérification sont scénarisés et ne contrôlent pas réellement votre abonnement, votre like ou votre commentaire sur YouTube.",footer:"Page indépendante • Conditions de l'offre à vérifier",step1:"Étape 1 sur 2",step2:"Étape 2 sur 2",subWarn:"Abonnement non détecté. Cliquez à nouveau sur « S’abonner », revenez ici puis réessayez.",subOk:"✓ Abonnement confirmé (simulation)",likeWarn:"Like et commentaire non détectés. Cliquez à nouveau sur « Liker et commenter la vidéo », revenez ici puis réessayez.",likeOk:"✓ Like et commentaire confirmés (simulation)",copied:"Code copié."},
+en:{title:"Free access — unlock your promo code",lead:"Complete the two steps below to reveal your promo code.",intro:'To unlock <strong>your promo code</strong>, complete the two free steps. After each action, return here and press the verification button.',yourCode:"Your promo code",revealHint:"Revealed after completing the steps",subscribe:"Subscribe and turn on notifications",verifySub:"Verify your subscription",subConfirmed:"✓ Subscription confirmed on this site",like:"Like and comment on the video",verifyLike:"Verify your like",bothDone:"✓ Both steps are confirmed",progress:"Unlock progress",unlock:"Unlock the link",unlockedLabel:"♧ Unlocked — your code",copy:"Copy",openSite:"Open website",copyHint:"Copy the code and use it on the relevant website.",how:"How it works",phone:"Phone",computer:"Computer",help1a:"Press the red button to open YouTube.",help1b:"Subscribe to the channel, then return to this page.",help1c:'Press “Verify your subscription” to continue.',disclaimer:"Simulation mode: verification messages are scripted and do not actually check your YouTube subscription, like, or comment.",footer:"Independent page • Check offer terms",step1:"Step 1 of 2",step2:"Step 2 of 2",subWarn:"Subscription not detected. Click Subscribe again, return here, then retry.",subOk:"✓ Subscription confirmed (simulation)",likeWarn:"Like and comment not detected. Click Like and comment again, return here, then retry.",likeOk:"✓ Like and comment confirmed (simulation)",copied:"Code copied."},
+es:{title:"Acceso gratis — desbloquea tu código promocional",lead:"Completa los dos pasos para revelar tu código promocional.",intro:'Para desbloquear <strong>tu código promocional</strong>, completa los dos pasos gratuitos. Después de cada acción, vuelve aquí y pulsa el botón de verificación.',yourCode:"Tu código promocional",revealHint:"Se revela al completar los pasos",subscribe:"Suscribirse y activar notificaciones",verifySub:"Verificar suscripción",subConfirmed:"✓ Suscripción confirmada en este sitio",like:"Dar me gusta y comentar el vídeo",verifyLike:"Verificar me gusta",bothDone:"✓ Ambos pasos están confirmados",progress:"Progreso del desbloqueo",unlock:"Desbloquear el enlace",unlockedLabel:"♧ Desbloqueado — tu código",copy:"Copiar",openSite:"Abrir sitio web",copyHint:"Copia el código y úsalo en el sitio correspondiente.",how:"Cómo hacerlo",phone:"Teléfono",computer:"Ordenador",help1a:"Pulsa el botón rojo para abrir YouTube.",help1b:"Suscríbete al canal y vuelve a esta página.",help1c:'Pulsa «Verificar suscripción» para continuar.',disclaimer:"Modo de simulación: los mensajes de verificación son simulados y no comprueban realmente tu suscripción, me gusta ni comentario en YouTube.",footer:"Página independiente • Comprueba las condiciones",step1:"Paso 1 de 2",step2:"Paso 2 de 2",subWarn:"Suscripción no detectada. Pulsa Suscribirse otra vez, vuelve aquí e inténtalo de nuevo.",subOk:"✓ Suscripción confirmada (simulación)",likeWarn:"No se detectaron el me gusta ni el comentario. Pulsa de nuevo, vuelve aquí e inténtalo otra vez.",likeOk:"✓ Me gusta y comentario confirmados (simulación)",copied:"Código copiado."},
+pt:{title:"Acesso grátis — desbloqueie seu código promocional",lead:"Conclua as duas etapas abaixo para revelar seu código promocional.",intro:'Para desbloquear <strong>seu código promocional</strong>, conclua as duas etapas gratuitas. Depois de cada ação, volte aqui e pressione o botão de verificação.',yourCode:"Seu código promocional",revealHint:"Revelado após concluir as etapas",subscribe:"Inscrever-se e ativar notificações",verifySub:"Verificar inscrição",subConfirmed:"✓ Inscrição confirmada neste site",like:"Curtir e comentar o vídeo",verifyLike:"Verificar curtida",bothDone:"✓ As duas etapas estão confirmadas",progress:"Progresso do desbloqueio",unlock:"Desbloquear o link",unlockedLabel:"♧ Desbloqueado — seu código",copy:"Copiar",openSite:"Abrir site",copyHint:"Copie o código e use-o no site correspondente.",how:"Como fazer",phone:"Telemóvel",computer:"Computador",help1a:"Pressione o botão vermelho para abrir o YouTube.",help1b:"Inscreva-se no canal e volte a esta página.",help1c:'Pressione «Verificar inscrição» para continuar.',disclaimer:"Modo de simulação: as mensagens são simuladas e não verificam realmente a inscrição, o gosto ou o comentário no YouTube.",footer:"Página independente • Verifique os termos",step1:"Etapa 1 de 2",step2:"Etapa 2 de 2",subWarn:"Inscrição não detectada. Clique novamente em Inscrever-se, volte aqui e tente de novo.",subOk:"✓ Inscrição confirmada (simulação)",likeWarn:"Curtida e comentário não detectados. Clique novamente, volte aqui e tente de novo.",likeOk:"✓ Curtida e comentário confirmados (simulação)",copied:"Código copiado."},
+de:{title:"Kostenloser Zugang — Promo-Code freischalten",lead:"Erledige die beiden Schritte, um deinen Promo-Code anzuzeigen.",intro:'Um <strong>deinen Promo-Code</strong> freizuschalten, erledige die zwei kostenlosen Schritte. Kehre nach jeder Aktion hierher zurück und drücke die Prüftaste.',yourCode:"Dein Promo-Code",revealHint:"Nach Abschluss der Schritte sichtbar",subscribe:"Abonnieren und Benachrichtigungen aktivieren",verifySub:"Abonnement bestätigen",subConfirmed:"✓ Abonnement auf dieser Seite bestätigt",like:"Video liken und kommentieren",verifyLike:"Like bestätigen",bothDone:"✓ Beide Schritte bestätigt",progress:"Freischaltfortschritt",unlock:"Link freischalten",unlockedLabel:"♧ Freigeschaltet — dein Code",copy:"Kopieren",openSite:"Website öffnen",copyHint:"Kopiere den Code und verwende ihn auf der entsprechenden Website.",how:"So funktioniert's",phone:"Telefon",computer:"Computer",help1a:"Drücke die rote Taste, um YouTube zu öffnen.",help1b:"Abonniere den Kanal und kehre dann hierher zurück.",help1c:'Drücke „Abonnement bestätigen“, um fortzufahren.',disclaimer:"Simulationsmodus: Die Prüfmeldungen sind simuliert und kontrollieren dein YouTube-Abo, Like oder deinen Kommentar nicht tatsächlich.",footer:"Unabhängige Seite • Angebotsbedingungen prüfen",step1:"Schritt 1 von 2",step2:"Schritt 2 von 2",subWarn:"Abonnement nicht erkannt. Klicke erneut auf Abonnieren, kehre zurück und versuche es erneut.",subOk:"✓ Abonnement bestätigt (Simulation)",likeWarn:"Like und Kommentar nicht erkannt. Klicke erneut, kehre zurück und versuche es erneut.",likeOk:"✓ Like und Kommentar bestätigt (Simulation)",copied:"Code kopiert."},
+it:{title:"Accesso gratuito — sblocca il codice promozionale",lead:"Completa i due passaggi per mostrare il codice promozionale.",intro:'Per sbloccare <strong>il tuo codice promozionale</strong>, completa i due passaggi gratuiti. Dopo ogni azione, torna qui e premi il pulsante di verifica.',yourCode:"Il tuo codice promozionale",revealHint:"Visibile dopo aver completato i passaggi",subscribe:"Iscriviti e attiva le notifiche",verifySub:"Verifica iscrizione",subConfirmed:"✓ Iscrizione confermata su questo sito",like:"Metti mi piace e commenta il video",verifyLike:"Verifica mi piace",bothDone:"✓ Entrambi i passaggi sono confermati",progress:"Avanzamento sblocco",unlock:"Sblocca il link",unlockedLabel:"♧ Sbloccato — il tuo codice",copy:"Copia",openSite:"Apri il sito",copyHint:"Copia il codice e usalo sul sito interessato.",how:"Come fare",phone:"Telefono",computer:"Computer",help1a:"Premi il pulsante rosso per aprire YouTube.",help1b:"Iscriviti al canale e poi torna a questa pagina.",help1c:'Premi «Verifica iscrizione» per continuare.',disclaimer:"Modalità simulazione: i messaggi sono simulati e non verificano realmente iscrizione, like o commento su YouTube.",footer:"Pagina indipendente • Verifica i termini",step1:"Passaggio 1 di 2",step2:"Passaggio 2 di 2",subWarn:"Iscrizione non rilevata. Clicca di nuovo su Iscriviti, torna qui e riprova.",subOk:"✓ Iscrizione confermata (simulazione)",likeWarn:"Like e commento non rilevati. Clicca di nuovo, torna qui e riprova.",likeOk:"✓ Like e commento confermati (simulazione)",copied:"Codice copiato."}
+};
+let stage=1, language="fr";
+function t(key){return (dict[language]&&dict[language][key])||dict.fr[key]||key}
+function renderLang(){document.documentElement.lang=language;document.querySelectorAll("[data-i18n]").forEach(el=>{let k=el.dataset.i18n;el.innerHTML=t(k)});document.getElementById("stageLabel").textContent=stage===1?t("step1"):t("step2")}
+document.getElementById("language").addEventListener("change",e=>{language=e.target.value;renderLang()});
+let subFailedOnce=false, subRetryReady=false, likeFailedOnce=false, likeRetryReady=false;
+const verify1=document.getElementById("verify1"), verify2=document.getElementById("verify2");
+verify1.style.display="none"; verify2.style.display="none";
+document.getElementById("subscribeLink").addEventListener("click",()=>{if(subFailedOnce){subRetryReady=true;verify1.style.display="flex";document.getElementById("status1").className="status warn";document.getElementById("status1").textContent=t("subWarn");}});
+document.getElementById("likeLink").addEventListener("click",()=>{if(likeFailedOnce){likeRetryReady=true;verify2.style.display="flex";document.getElementById("status2").className="status warn";document.getElementById("status2").textContent=t("likeWarn");}});
+verify1.addEventListener("click",()=>{
+ if(!subFailedOnce){subFailedOnce=true;subRetryReady=false;verify1.style.display="none";document.getElementById("status1").className="status warn";document.getElementById("status1").textContent=t("subWarn");return;}
+ if(!subRetryReady)return;
+ document.getElementById("status1").className="status ok";document.getElementById("status1").textContent=t("subOk");document.getElementById("seg1").classList.add("done");document.getElementById("step1").classList.add("hidden");document.getElementById("step2").classList.remove("hidden");stage=2;renderLang();
+});
+verify2.addEventListener("click",()=>{
+ if(!likeFailedOnce){likeFailedOnce=true;likeRetryReady=false;verify2.style.display="none";document.getElementById("status2").className="status warn";document.getElementById("status2").textContent=t("likeWarn");return;}
+ if(!likeRetryReady)return;
+ document.getElementById("status2").className="status ok";document.getElementById("status2").textContent=t("likeOk");document.getElementById("seg2").classList.add("done");document.getElementById("unlockArea").classList.remove("hidden");verify2.disabled=true;verify2.style.opacity=".5";
+});
+document.getElementById("unlock").addEventListener("click",()=>{document.getElementById("lockedCode").classList.add("hidden");document.getElementById("stageLabel").classList.add("hidden");document.querySelector(".progress").classList.add("hidden");document.getElementById("step1").classList.add("hidden");document.getElementById("step2").classList.add("hidden");document.getElementById("unlockArea").classList.add("hidden");document.getElementById("revealed").classList.remove("hidden")});
+document.getElementById("copy").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(CONFIG.promoCode);document.getElementById("copy").lastElementChild.textContent=t("copied")}catch(e){let r=document.createRange();r.selectNode(document.getElementById("realCode"));window.getSelection().removeAllRanges();window.getSelection().addRange(r)}});
+document.getElementById("phoneTab").onclick=()=>{document.getElementById("phoneTab").classList.add("active");document.getElementById("computerTab").classList.remove("active")};
+document.getElementById("computerTab").onclick=()=>{document.getElementById("computerTab").classList.add("active");document.getElementById("phoneTab").classList.remove("active")};
+renderLang();
+</script>
+</body></html>
